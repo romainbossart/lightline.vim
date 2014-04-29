@@ -32,22 +32,20 @@ if &background == 'light'
   let [s:base00, s:base0] = [s:base0, s:base00]
 endif
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-let s:p.normal.left = [ [ s:base02, s:blue ], [ s:base00, s:base02 ] ]
-let s:p.normal.right = [ [ s:base02, s:base0 ], [ s:base1, s:base01 ] ]
-let s:p.inactive.right = [ [ s:base02, s:base01 ], [ s:base00, s:base02 ] ]
-let s:p.inactive.left =  [ [ s:base0, s:base02 ], [ s:base00, s:base02 ] ]
-let s:p.insert.left = [ [ s:base3, s:green ], [ s:base00, s:base02 ] ]
-let s:p.replace.left = [ [ s:base3, s:red ], [ s:base00, s:base02 ] ]
-let s:p.visual.left = [ [ s:base3, s:magenta ], [ s:base00, s:base02 ] ]
-let s:p.normal.middle = [ [ s:base1, s:base02 ] ]
-let s:p.inactive.middle = [ [ s:base0, s:base02 ] ]
-let s:p.tabline.left = [ [ s:base2, s:base01 ] ]
-let s:p.tabline.tabsel = [ [ s:base2, s:base03 ] ]
-let s:p.tabline.middle = [ [ s:base01, s:base2 ] ]
+let s:p.normal.left = [ [ s:base02, s:green ], [ s:base00, s:base03 ] ]
+let s:p.normal.right = [ [ s:base02, s:base1 ], [ s:base02, s:base01 ] ]
+let s:p.inactive.right = [ [ s:base02, s:base1 ], [ s:base02, s:base01 ] ]
+let s:p.inactive.left =  [ [ s:base01, s:base03 ], [ s:base0, s:base02 ] ]
+let s:p.insert.left = [ [ s:base02, s:blue ], [ s:base01, s:base03 ] ]
+let s:p.replace.left = [ [ s:base02, s:red ], [ s:base01, s:base03 ] ]
+let s:p.visual.left = [ [ s:base03, s:magenta ], [ s:base01, s:base03 ] ]
+let s:p.normal.middle = [ [ s:base01, s:base02 ] ]
+let s:p.inactive.middle = [ [ s:base01, s:base02 ] ]
+let s:p.tabline.left = [ [ s:base01, s:base02 ] ]
+let s:p.tabline.tabsel = [ [ s:base02, s:green ] ]
+let s:p.tabline.middle = [ [ s:base1, s:base02 ] ]
 let s:p.tabline.right = copy(s:p.normal.right)
-let s:p.normal.error = [ [ s:red, s:base01 ] ]
-let s:p.normal.warning = [ [ s:yellow, s:base01 ] ]
-let s:p.normal.error = [ [ s:base02, s:red ] ]
-let s:p.normal.warning = [ [ s:base2, s:yellow ] ]
+let s:p.normal.error = [ [ s:red, s:base02 ] ]
+let s:p.normal.warning = [ [ s:yellow, s:base02 ] ]
 
-let g:lightline#colorscheme#solarized_light#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#solarized_16_light#palette = lightline#colorscheme#flatten(s:p)
